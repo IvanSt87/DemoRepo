@@ -7,7 +7,6 @@
     using SeleniumTests.Pages;
     using SeleniumTests.Pages.DemoQA;
     using System.IO;
-    using System.Linq;
 
     public class DemoQATests
     {
@@ -29,6 +28,8 @@
             _navigationBar = new NaviogationBarPage(_driver);
             _basePage = new BasePage(_driver);
             _driver.Url = "https://demoqa.com/";
+
+            _homePage.ScrollTo(_homePage.Widget);
         }
 
         [TearDown]
